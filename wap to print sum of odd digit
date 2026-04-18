@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("enter number n:");
+    scanf("%d",&n);
+    int sum=0;
+    int ld=0;
+    while(n!=0){
+        ld=n%10;
+        if (ld%2!=0){
+         sum=sum+ld;}
+           n=n/10;}
+     printf("sum of odd digit in  is :%d\n",sum);
+    return 0;
+}
