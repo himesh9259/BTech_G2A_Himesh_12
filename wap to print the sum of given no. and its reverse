@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int num, originalNum, reversedNum = 0, remainder, sum;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    originalNum = num; // Store original value to add later
+
+    // Logic to reverse the number
+    while (num != 0) {
+        remainder = num % 10;          // Extract the last digit
+        reversedNum = reversedNum * 10 + remainder; // Build the reversed number
+        num /= 10;                     // Remove the last digit
+    }
+
+    sum = originalNum + reversedNum; // Calculate the final sum
+
+    printf("Original Number: %d\n", originalNum);
+    printf("Reversed Number: %d\n", reversedNum);
+    printf("Sum: %d\n", sum);
+
+    return 0;
+}
